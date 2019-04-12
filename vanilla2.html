@@ -1,0 +1,17 @@
+<html>
+
+<script>
+var obj = {
+    c : 0,
+    d : 110
+}
+
+function add(a,b){
+console.log('The sum is '+(a+b));
+this.c = a+b+this.d;
+}
+
+add.call(obj,10,20)
+console.log("The c is ",obj.c)
+</script>
+</html>

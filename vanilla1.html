@@ -1,0 +1,43 @@
+<html>
+
+<script>
+//
+function show(){
+    console.log('Hello world');
+}
+show();
+
+function add(a,b){
+console.log('The sum is '+(a+b))
+}
+add(2,5);
+//In js array is trated as an object.arguments is an property present insdie the array object
+function add1(){
+    var s = 0;
+    for(var i=0;i<arguments.length;i++){
+s = s+arguments[i];
+    }
+    console.log('The new sum is '+s);
+}
+
+add1(1,2);
+add1(2,3,4);
+add1(6,7,9,8);
+
+function multiply(a,b){
+console.log('The multiplication is '+(a*b))
+}
+
+multiply.call(null,2,5);
+
+
+function sumMarks(){
+var s=0;
+for(var i=0;i<arguments.length;i++){
+s = s+arguments[i];
+}
+console.log('The marks sum is ',s)
+}
+sumMarks.apply(null,[11,22,33])
+</script>
+</html>

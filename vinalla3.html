@@ -1,0 +1,25 @@
+<html>
+
+<script>
+//In vanila javascript , we do not have class keyword , so we have to create a function. This function will act as an constructor if invoked with the help of new operator
+var Person = function(name,dob,dept){
+this.name = name;
+this.dob = dob;
+this.dept = dept;
+
+}
+//extending the class : prototype
+//prototype is bydefault property of every object
+Person.prototype.getInfo = function(){
+console.log("The name is "+this.name+" , dob is "+this.dob+" , department is "+this.dept)
+}
+
+Person.prototype.getAge = function(){
+console.log('The age is '+(new Date().getFullYear()-this.dob))
+}
+
+var ob1 = new Person("Mohan",1990,"IT");
+ob1.getInfo();
+ob1.getAge();
+</script>
+</html>
